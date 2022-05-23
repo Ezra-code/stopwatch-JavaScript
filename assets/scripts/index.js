@@ -33,11 +33,14 @@ function displayTimer(){
         millisecond = 0
         second++
         console.log("seconds: " + second)
-        secnd.innerHTML = second
+        let s = second < 10 ? "0" + second : second;
+        secnd.innerHTML = s
+      
     }
         if(second == 60){
             second = 0
             minute++
-            minit.innerHTML = '0' + minute +':'
+            let m = minute < 10 ? "0" + minute : minute;
+            minit.innerHTML = m + ':'
         }
 }
